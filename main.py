@@ -20,7 +20,7 @@ model = genai.GenerativeModel("gemini-1.5-pro-latest")
 class RequestData(BaseModel):
     text: str
     source_lang: str
-    target_lang: str
+    target_lang: str='en'
 
 #call the LLM API
 def query_llm(input_text: str) -> str:
